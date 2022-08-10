@@ -1,7 +1,5 @@
 package com.ceriotti.customers.resources;
 
-import java.time.Instant;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +20,6 @@ public class ClientResource {
 	
 	@GetMapping
 	public ResponseEntity<List<Client>> findAll() {
-		//Instant date1 = Instant.now();
-		//Instant date2 = Instant.parse("1970-01-01T00:00:00Z");
 		List<Client> list = service.findAll();
 		return ResponseEntity.ok().body(list);
 	}
